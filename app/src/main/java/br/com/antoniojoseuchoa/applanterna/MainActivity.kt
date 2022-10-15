@@ -46,12 +46,14 @@ class MainActivity : AppCompatActivity() {
            binding.ivLanterna.setImageResource(R.drawable.ic_lanterna_ligada)
            state = true
            ascenderLaternaDispositivo(state)
+           binding.tvAtivadoDesativado.setTextColor(Color.WHITE)
         }else{
             binding.tvAtivadoDesativado.text = "Desativado"
             binding.cardAtivar.setCardBackgroundColor(Color.WHITE)
             binding.ivLanterna.setImageResource(R.drawable.ic_lanterna_apagada)
             state = false
             ascenderLaternaDispositivo(state)
+            binding.tvAtivadoDesativado.setTextColor(Color.BLACK)
         }
 
     }

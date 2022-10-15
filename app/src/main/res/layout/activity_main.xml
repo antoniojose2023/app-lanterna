@@ -44,8 +44,9 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:layout_marginTop="16dp"
-            android:text="Ative sua lanterna quando quiser clicando no botão abaixo: [ativando - dasativando]"/>
+            android:layout_marginTop="20sp"
+            android:fontFamily="@font/acmeregular"
+            android:text="Ative sua lanterna quando quiser clicando no botão abaixo: [ativando - desativando]"/>
 
     </LinearLayout>
 
