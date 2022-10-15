@@ -45,14 +45,14 @@ class MainActivity : AppCompatActivity() {
            binding.cardAtivar.setCardBackgroundColor(Color.GRAY)
            binding.ivLanterna.setImageResource(R.drawable.ic_lanterna_ligada)
            state = true
-           ascenderLaternaDispositivo(state)
+            ascenderLanternaDispositivo(state)
            binding.tvAtivadoDesativado.setTextColor(Color.WHITE)
         }else{
             binding.tvAtivadoDesativado.text = "Desativado"
             binding.cardAtivar.setCardBackgroundColor(Color.WHITE)
             binding.ivLanterna.setImageResource(R.drawable.ic_lanterna_apagada)
             state = false
-            ascenderLaternaDispositivo(state)
+            ascenderLanternaDispositivo(state)
             binding.tvAtivadoDesativado.setTextColor(Color.BLACK)
         }
 
@@ -60,11 +60,15 @@ class MainActivity : AppCompatActivity() {
 
 
     @RequiresApi(Build.VERSION_CODES.M)
-    fun ascenderLaternaDispositivo(state: Boolean){
+    fun ascenderLanternaDispositivo(state: Boolean){
+           //retorna o serviço de camera do sistema
            val cameraManager = getSystemService(CAMERA_SERVICE) as CameraManager
 
            try{
+               //retorna a id da camera a ser utilizada - [0 - camera trazeira] [1 - camera frontal]
                var idCamera: String = cameraManager.cameraIdList[0]
+
+               //ativa e desativa a camera
                cameraManager.setTorchMode(idCamera, state)
 
            }catch (e: java.lang.Exception){
