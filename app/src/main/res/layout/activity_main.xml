@@ -21,6 +21,34 @@
         app:layout_constraintVertical_bias="0.197" />
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_ativar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_lanterna"
+        app:layout_constraintVertical_bias="0.244">
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:text="Ative sua lanterna quando quiser clicando no botão abaixo: [ativando - dasativando]"/>
+
+    </LinearLayout>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_ativar"
         android:layout_width="0dp"
